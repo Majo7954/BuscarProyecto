@@ -14,7 +14,12 @@ describe("Buscar", () => {
     let proyectos = [];
     expect (buscarProyecto("ejercicio1", proyectos)).toEqual("");
   });
-  
+
+  it("encuentra un proyecto cuando el mismo existe en una lista de 1 proyecto", () => {
+    let proyectos = [];
+    proyectos.push("miUnicoProyecto");
+    expect (buscarProyecto("miUnicoProyecto", proyectos)).toEqual("miUnicoProyecto");
+  });
 });
 
 

@@ -1,5 +1,8 @@
 function buscarProyecto(nombre, proyectos){
-    return "";
+    if (proyectos.length === 0){
+        return "";
+    }
+    return nombre;
 }
 
 export default buscarProyecto;
