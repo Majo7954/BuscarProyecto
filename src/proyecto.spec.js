@@ -4,9 +4,13 @@ import buscarProyecto from "./proyecto.js";
 //Buscar el proyecto en una lista vacia
 //Buscar y encontrar un proyecto en una lista de 1 proyecto
 //Buscar y encontrar un proyecto en una lista de varios proyectos
-//Buscar y encontrar mas de una coindencia de proyectos
-//Buscar y encontrar proyectos cuyo nombre empieza con el criterio de busqueda
+
+//Para terminar:
+// buscar y encontrar mas de una coindencia de proyectos
+// buscar y encontrar proyectos cuyo nombre empieza con el criterio de busqueda
          // por ejm: "ejerc" y en mi lista tengo "ejercio1", "ejercicio2" -> devuelve ambos
+// Devuelve "" cuando no existe una coincidencia con ningun proyecto
+
 
 describe("Buscar", () => {
 
@@ -19,6 +23,14 @@ describe("Buscar", () => {
     let proyectos = [];
     proyectos.push("miUnicoProyecto");
     expect (buscarProyecto("miUnicoProyecto", proyectos)).toEqual("miUnicoProyecto");
+  });
+
+  it("encuentra un proyecto cuando el mismo existe en una lista de varios proyectos", () => {
+    let proyectos = [];
+    proyectos.push("proyecto1");
+    proyectos.push("proyecto2");
+    proyectos.push("proyecto3");
+    expect (buscarProyecto("proyecto2", proyectos)).toEqual("proyecto2");
   });
 });
 
