@@ -9,7 +9,9 @@ function buscarProyecto(nombre, proyectos){
         }
     }
 
-    if (coincidencias.length === 1) {
+    if (coincidencias.length === 0) {
+        return "";
+    } else if (coincidencias.length === 1) {
         return coincidencias[0];
     } else {
         return coincidencias;
