@@ -4,8 +4,8 @@ function buscarProyecto(nombre, proyectos){
     }
     const coincidencias = [];
     for (let i = 0; i < proyectos.length; i++) {
-        if (proyectos[i] === nombre) {
-            coincidencias.push(nombre);
+        if (proyectos[i].startsWith(nombre)) {
+            coincidencias.push(proyectos[i]);
         }
     }
 

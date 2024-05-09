@@ -41,6 +41,11 @@ describe("Buscar", () => {
     proyectos.push("proyecto1");
     expect(buscarProyecto("proyecto1", proyectos)).toEqual(["proyecto1", "proyecto1"]);
   });
+
+  it("encuentra proyectos cuyos nombres empiezan con el criterio de búsqueda", () => {
+    let proyectos = ["ejercicio1", "ejercicio2", "proyecto1"];
+    expect(buscarProyecto("ejerc", proyectos)).toEqual(["ejercicio1", "ejercicio2"]);
+  });
 });
 
 
