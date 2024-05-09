@@ -32,6 +32,15 @@ describe("Buscar", () => {
     proyectos.push("proyecto3");
     expect (buscarProyecto("proyecto2", proyectos)).toEqual("proyecto2");
   });
+
+  it("encuentra más de un proyecto cuando hay más de una coincidencia en la lista", () => {
+    let proyectos = [];
+    proyectos.push("proyecto1");
+    proyectos.push("proyecto2");
+    proyectos.push("proyecto3");
+    proyectos.push("proyecto1");
+    expect(buscarProyecto("proyecto1", proyectos)).toEqual(["proyecto1", "proyecto1"]);
+  });
 });
 
 
